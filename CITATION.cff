@@ -1,10 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this code or data, please cite it as below. Data credit: morphological data collected by MD."
+message: "If you use this code or data, please cite it as below. Data credit: morphological data collected by Mimangsa Darshan Chakraborty (Mizoram University)."
 title: "Spider species classification from morphological characters"
 type: software
 authors:
-  # TODO: replace with MD's full name and affiliation once confirmed (data collector)
-  - name: "MD"
+  - family-names: "Chakraborty"
+    given-names: "Mimangsa Darshan"
+    affiliation: "Mizoram University"
   - family-names: "Das"
     given-names: "Angsuman"
     orcid: "https://orcid.org/0000-0001-8146-7697"

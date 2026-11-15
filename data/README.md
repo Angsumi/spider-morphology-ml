@@ -1,6 +1,6 @@
 # Data
 
-Morphological data collected by MD <!-- TODO: full name and affiliation -->. Licensed CC BY 4.0 (see `LICENSE`).
+Morphological data measured by Mimangsa Darshan Chakraborty (Mizoram University). Licensed CC BY 4.0 (see `LICENSE`).
 
 ## Canonical source
 
@@ -31,5 +31,5 @@ Rebuild with `python src/prepare_data.py`.
 ## Legacy
 
 - `raw/legacy/spider_dataset_for_ml_v1.xlsx`: the 1721 × 38 table used by the original notebook.
-- `raw/legacy/spider_species_descriptions_v0.xlsx`: 45 × 38 species-level descriptions. v1 is an expansion of this table (see `results/data_diagnostics.json`).
+- `raw/legacy/spider_species_descriptions_v0.xlsx`: 45 × 38 species-level summary table with the same columns as v1 (comparison in `results/data_diagnostics.json`).
 - `raw/legacy/earlier_drafts/`: earlier, differently structured drafts (1885–2003 rows with male/female columns; a 46-row taxonomy table). They are not used by any script and are kept for provenance.

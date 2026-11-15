@@ -1,5 +1,5 @@
 Spider morphological character data
-Collected by MD  <!-- TODO: full name and affiliation -->
+Collected by Mimangsa Darshan Chakraborty (Mizoram University)
 
 This dataset (all files under data/, including the workbooks in data/raw/ and the
 derived files data/processed/spiders.csv and data/data_dictionary.csv) is licensed
@@ -10,7 +10,7 @@ provided you give appropriate credit, provide a link to the license, and indicat
 if changes were made.
 
 Suggested credit:
-  Morphological data collected by MD. Spider species classification from
+  Morphological data collected by Mimangsa Darshan Chakraborty (Mizoram University). Spider species classification from
   morphological characters, https://github.com/Angsumi/spider-morphology-ml, CC BY 4.0.
 
 Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode

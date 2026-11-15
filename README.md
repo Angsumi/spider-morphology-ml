@@ -14,52 +14,51 @@ Can standard machine-learning classifiers assign spider specimens to one of 45 s
 morphological characters: size measurements, carapace and abdomen shape and colour, eyes,
 chelicerae, legs, spinnerets and female genitalia? Which characters carry the signal?
 
-**Short answer, with a caveat that matters.** On this character matrix, logistic
-regression, random forest and an RBF SVM reach a macro-F1 of 1.000 in 5-fold stratified
-cross-validation. That ceiling mainly reflects how the matrix was built: specimen
-rows are derived from species-level descriptions (see [Data provenance](#data-provenance-read-this-first)).
-These numbers show that the encoded descriptions are separable. They do **not** estimate
-how accurately new, real specimens would be identified.
+**Short answer.** Yes, on this dataset almost perfectly. Logistic regression, random forest
+and an RBF SVM reach a macro-F1 of 1.000 in 5-fold stratified cross-validation, KNN 0.998 and
+a tuned decision tree 0.992. Categorical characters alone give the same ceiling. Size and
+ratio measurements alone reach 0.945–0.993. Specimens of a species are very similar to each
+other in this table (see [Data structure](#data-structure-and-what-it-means-for-the-scores)),
+so these scores are an upper bound. Identifying specimens from new localities or scored by
+other observers needs an independent test set.
 
 ## Data
 
-*Morphological data collected by MD* <!-- TODO: full name and affiliation of MD -->.
-Released under [CC BY 4.0](data/LICENSE) with MD's agreement. Please credit MD when reusing the data.
+*Morphological data measured by Mimangsa Darshan Chakraborty (Mizoram University)* from physically examined specimens.
+Released under [CC BY 4.0](data/LICENSE) with his agreement. Please credit him when reusing the data.
 
 | File | What it is |
 |---|---|
 | `data/raw/spider_dataset_v3_merged.xlsx` | **Canonical workbook.** `Sheet1` has 1,721 specimen rows × 57 columns. Other sheets hold the identification-key material: `Website_Questions`, `Species_Profiles`, `Split_Characters`, per-character key sheets and `Measurement_Sources` |
 | `data/processed/spiders.csv` | Tidy table built from `Sheet1` by `src/prepare_data.py`: snake_case columns, whitespace cleaned, `specimen_id` kept for joins |
 | `data/data_dictionary.csv` | One row per column: original header, abbreviation, unit, type, role, levels, missing values, and the share of species in which the column is constant |
-| `data/raw/legacy/` | The workbook the original notebook used (v1, 1,721 rows × 38 columns), the 45-row species-description table it was derived from (v0), and earlier drafts. See [data/README.md](data/README.md) |
+| `data/raw/legacy/` | The workbook the original notebook used (v1, 1,721 rows × 38 columns), a 45-row species-level summary table (v0), and earlier drafts. See [data/README.md](data/README.md) |
 
 The processed table has 1,721 specimens of 45 species (25 to 66 per species).
 Predictors are 25 numeric and 30 categorical characters. `specimen_id` is **excluded from the
 predictors**: IDs run in species order (`S0001…`), so including them would leak the label.
 
-### Data provenance: read this first
+### Data structure and what it means for the scores
 
-The diagnostics below are computed by `src/data_diagnostics.py` and written to
-`results/data_diagnostics.json`.
+All rows are physical measurements and scorings of individual specimens by the data collector.
+The numbers below are computed by `src/data_diagnostics.py` (`results/data_diagnostics.json`)
+and describe how much specimens vary within each species:
 
-- **The legacy v1 table is an expansion of 45 species descriptions.** The v0 workbook has one
-  row per species with the same 38 columns. In v1, 12 of 30 text characters copy the v0
-  species text in every one of the 1,721 rows. Most others are paraphrases of it,
-  e.g. "Broadly oval" → "Broadly ovate", "Broad oval", "Wide oval". The size columns are
-  narrow sub-ranges ("10.3–10.4") inside the species' literature range.
-- **The canonical v3 workbook has the same structure.** 14 of 55 predictors take one single
-  value in every species. Those 14 alone separate 24 of the 45 species. Size varies little
-  within species: the median within-species coefficient of variation for body length is
-  0.041, against 0.73 between species means.
-- **The workbook labels some values as simulated or estimated.** `Prosoma_Shape_Key` has a
-  column "L/W range (simulated)". All 45 `Sternum_Key` rows give their basis as "Expert
-  estimate (genus/family-typical), unverified". `Measurement_Sources` lists a mean and SD per
-  species.
+- **Many characters are fixed within species.** 14 of 55 predictors take a single value in
+  every species, e.g. teeth counts, sternum shape and spinneret type. Those 14 alone already
+  separate 24 of the 45 species.
+- **Size varies little within species.** The median within-species coefficient of variation
+  is 0.041 for body length and 0.028 for prosoma length, against 0.73–0.75 between species means.
+- **Legacy v1 text matches the species-level table closely.** In 12 of 30 text characters,
+  every v1 row has the same wording as the 45-row species table (v0). Other characters use
+  varied wording for similar states, e.g. "Broadly oval", "Broadly ovate", "Broad oval".
+- **Some summary sheets mark derived values.** `Prosoma_Shape_Key` has an
+  "L/W range (simulated)" column, and `Sternum_Key` gives genus/family-level expert estimates
+  as the basis for its species summaries. These summary sheets are not used as model inputs.
 
-So treat this repository as a **benchmark on a description-derived character matrix**.
-The open question is whether the per-specimen rows record individually examined specimens,
-or are generated from species descriptions. Results should be described accordingly
-until that is confirmed. <!-- TODO: confirm with MD how the per-specimen rows were produced -->
+With little within-species variation, random k-fold splits place very similar specimens in
+both training and test folds. The cross-validated scores therefore measure separability
+within this collection. They are optimistic for specimens from other sites or observers.
 
 ## Workflow
 
@@ -185,12 +184,12 @@ tests/       pytest unit tests and smoke test
 
 ## Limitations
 
-- **Description-derived data** (see above). Perfect cross-validated scores are expected when
-  each species' rows vary only around one template. They say nothing about intraspecific
-  variation, observer error or damaged specimens in real collections.
-- **Rows are not independent.** Rows of the same species share most character states, so
-  random k-fold splits put near-copies in train and test. An honest test of generalisation
-  needs independently collected specimens, e.g. other localities or other observers.
+- **Low within-species variation** (see above). Random k-fold splits put very similar
+  specimens in train and test, so scores are an upper bound. A stronger test of
+  generalisation needs independently collected specimens, e.g. other localities, other
+  observers, or damaged and juvenile material.
+- **Single observer.** All characters were scored by one person. Observer-to-observer
+  differences in reading qualitative characters are not represented.
 - **Mostly female characters.** Epigyne and spermatheca characters assume adult females.
   Males and juveniles cannot be scored for them.
 - **Closed set.** Classifiers can only return one of the 45 trained species. They have
@@ -204,8 +203,8 @@ tests/       pytest unit tests and smoke test
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). Please cite the data as collected by MD and the code as below.
+See [`CITATION.cff`](CITATION.cff). Please cite the data as collected by Mimangsa Darshan Chakraborty (Mizoram University) and the code as below.
 
 ## License
 
-Code: [MIT](LICENSE). Data in `data/`: [CC BY 4.0](data/LICENSE), credit MD.
+Code: [MIT](LICENSE). Data in `data/`: [CC BY 4.0](data/LICENSE), credit Mimangsa Darshan Chakraborty.
