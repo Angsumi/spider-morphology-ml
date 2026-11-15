@@ -1,0 +1,54 @@
+{
+  "data": "data/raw/legacy/spider_dataset_for_ml_v1.xlsx",
+  "n_specimens": 1721,
+  "n_species": 45,
+  "split": "train_test_split(test_size=0.2, stratify=y, random_state=42); OOF = 5-fold on training part",
+  "results": [
+    {
+      "model": "Logistic Regression",
+      "test_accuracy": 0.9884,
+      "notebook_test_accuracy": 0.9884,
+      "oof_accuracy": 0.9651,
+      "notebook_oof_accuracy": 0.9651,
+      "oof_macro_f1": 0.963,
+      "notebook_oof_macro_f1": 0.963
+    },
+    {
+      "model": "KNN",
+      "test_accuracy": 0.8145,
+      "notebook_test_accuracy": 0.8145,
+      "oof_accuracy": 0.8321,
+      "notebook_oof_accuracy": 0.8321,
+      "oof_macro_f1": 0.8207,
+      "notebook_oof_macro_f1": 0.8207
+    },
+    {
+      "model": "Decision Tree",
+      "test_accuracy": 0.9826,
+      "notebook_test_accuracy": 0.9826,
+      "oof_accuracy": 0.9891,
+      "notebook_oof_accuracy": 0.9891,
+      "oof_macro_f1": 0.9884,
+      "notebook_oof_macro_f1": 0.9884
+    },
+    {
+      "model": "Random Forest",
+      "test_accuracy": 0.9884,
+      "notebook_test_accuracy": 0.9884,
+      "oof_accuracy": 0.984,
+      "notebook_oof_accuracy": 0.984,
+      "oof_macro_f1": 0.9835,
+      "notebook_oof_macro_f1": 0.9835
+    },
+    {
+      "model": "SVM",
+      "test_accuracy": 0.9536,
+      "notebook_test_accuracy": 0.9536,
+      "oof_accuracy": 0.9397,
+      "notebook_oof_accuracy": 0.9397,
+      "oof_macro_f1": 0.9281,
+      "notebook_oof_macro_f1": 0.9281
+    }
+  ],
+  "diagnostic_rf_three_size_midpoints_only_test_accuracy": 0.8435
+}

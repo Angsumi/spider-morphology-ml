@@ -1,0 +1,533 @@
+{
+  "data": "data/processed/spiders.csv",
+  "n_specimens": 1721,
+  "n_species": 45,
+  "n_numeric_features": 25,
+  "n_categorical_features": 30,
+  "excluded_columns": [
+    "specimen_id (assigned in species order; would leak the label)"
+  ],
+  "cv": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+  "decision_tree_tuning": "GridSearchCV inside each outer training fold",
+  "sample_per_species": null,
+  "versions": {
+    "python": "3.11.18",
+    "scikit-learn": "1.5.2",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4"
+  },
+  "summary": [
+    {
+      "feature_set": "all",
+      "model": "Logistic Regression",
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "balanced_accuracy_mean": 1.0,
+      "balanced_accuracy_std": 0.0,
+      "macro_f1_mean": 1.0,
+      "macro_f1_std": 0.0
+    },
+    {
+      "feature_set": "all",
+      "model": "Random Forest",
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "balanced_accuracy_mean": 1.0,
+      "balanced_accuracy_std": 0.0,
+      "macro_f1_mean": 1.0,
+      "macro_f1_std": 0.0
+    },
+    {
+      "feature_set": "all",
+      "model": "SVM",
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "balanced_accuracy_mean": 1.0,
+      "balanced_accuracy_std": 0.0,
+      "macro_f1_mean": 1.0,
+      "macro_f1_std": 0.0
+    },
+    {
+      "feature_set": "all",
+      "model": "KNN",
+      "accuracy_mean": 0.9983,
+      "accuracy_std": 0.0026,
+      "balanced_accuracy_mean": 0.9979,
+      "balanced_accuracy_std": 0.0033,
+      "macro_f1_mean": 0.9981,
+      "macro_f1_std": 0.003
+    },
+    {
+      "feature_set": "all",
+      "model": "Decision Tree",
+      "accuracy_mean": 0.9924,
+      "accuracy_std": 0.0076,
+      "balanced_accuracy_mean": 0.992,
+      "balanced_accuracy_std": 0.0081,
+      "macro_f1_mean": 0.9918,
+      "macro_f1_std": 0.0084
+    },
+    {
+      "feature_set": "categorical",
+      "model": "Logistic Regression",
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "balanced_accuracy_mean": 1.0,
+      "balanced_accuracy_std": 0.0,
+      "macro_f1_mean": 1.0,
+      "macro_f1_std": 0.0
+    },
+    {
+      "feature_set": "categorical",
+      "model": "Random Forest",
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "balanced_accuracy_mean": 1.0,
+      "balanced_accuracy_std": 0.0,
+      "macro_f1_mean": 1.0,
+      "macro_f1_std": 0.0
+    },
+    {
+      "feature_set": "categorical",
+      "model": "SVM",
+      "accuracy_mean": 0.9994,
+      "accuracy_std": 0.0013,
+      "balanced_accuracy_mean": 0.9994,
+      "balanced_accuracy_std": 0.0014,
+      "macro_f1_mean": 0.9993,
+      "macro_f1_std": 0.0015
+    },
+    {
+      "feature_set": "categorical",
+      "model": "KNN",
+      "accuracy_mean": 0.9936,
+      "accuracy_std": 0.0056,
+      "balanced_accuracy_mean": 0.9916,
+      "balanced_accuracy_std": 0.0068,
+      "macro_f1_mean": 0.9921,
+      "macro_f1_std": 0.0067
+    },
+    {
+      "feature_set": "categorical",
+      "model": "Decision Tree",
+      "accuracy_mean": 0.9913,
+      "accuracy_std": 0.0085,
+      "balanced_accuracy_mean": 0.9912,
+      "balanced_accuracy_std": 0.0082,
+      "macro_f1_mean": 0.9913,
+      "macro_f1_std": 0.0079
+    },
+    {
+      "feature_set": "numeric",
+      "model": "Random Forest",
+      "accuracy_mean": 0.9936,
+      "accuracy_std": 0.0032,
+      "balanced_accuracy_mean": 0.9934,
+      "balanced_accuracy_std": 0.0031,
+      "macro_f1_mean": 0.9934,
+      "macro_f1_std": 0.0031
+    },
+    {
+      "feature_set": "numeric",
+      "model": "Decision Tree",
+      "accuracy_mean": 0.9791,
+      "accuracy_std": 0.0063,
+      "balanced_accuracy_mean": 0.9773,
+      "balanced_accuracy_std": 0.0071,
+      "macro_f1_mean": 0.9774,
+      "macro_f1_std": 0.007
+    },
+    {
+      "feature_set": "numeric",
+      "model": "Logistic Regression",
+      "accuracy_mean": 0.9634,
+      "accuracy_std": 0.0115,
+      "balanced_accuracy_mean": 0.9621,
+      "balanced_accuracy_std": 0.0123,
+      "macro_f1_mean": 0.9627,
+      "macro_f1_std": 0.0117
+    },
+    {
+      "feature_set": "numeric",
+      "model": "SVM",
+      "accuracy_mean": 0.9541,
+      "accuracy_std": 0.0052,
+      "balanced_accuracy_mean": 0.9533,
+      "balanced_accuracy_std": 0.0047,
+      "macro_f1_mean": 0.9531,
+      "macro_f1_std": 0.0051
+    },
+    {
+      "feature_set": "numeric",
+      "model": "KNN",
+      "accuracy_mean": 0.946,
+      "accuracy_std": 0.0088,
+      "balanced_accuracy_mean": 0.9451,
+      "balanced_accuracy_std": 0.0082,
+      "macro_f1_mean": 0.9452,
+      "macro_f1_std": 0.0097
+    }
+  ],
+  "per_species_f1": [
+    {
+      "species": "Apochinomma elongatum",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Araneus gemmoides",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Argiope argentata",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9412,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Argiope pulchella",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9877,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Bathyphantes sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Cyclosa conica",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Cyclosa oculata",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Epeus flavobilineatus",
+      "Logistic Regression": 1.0,
+      "KNN": 0.9867,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Episinus sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9831,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Evarcha bulbosa",
+      "Logistic Regression": 1.0,
+      "KNN": 0.9831,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Gasteracantha diadesmia",
+      "Logistic Regression": 1.0,
+      "KNN": 0.9903,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Gasteracantha kuhli",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Gasteracantha sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 0.9859,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Gea spinipes",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Gnaphosa lucifuga",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Hasarius adansoni",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Heliophanus cupreus",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Heteropoda jugulans",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Heteropoda venatoria",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Hogna antelucana",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Leptorchestes mutilloides",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Leucauge celebesiana",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9831,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Lycosa erythrognatha",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9882,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Macracantha arcuata",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Metacyrba taeniola",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Metellina segmentata",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9831,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Misumenoides sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9804,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Myrmarachne cornuta",
+      "Logistic Regression": 1.0,
+      "KNN": 0.9873,
+      "Decision Tree": 0.9873,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Myrmarachne sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 0.9818,
+      "Decision Tree": 0.9286,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Neoscona triangula",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9367,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Nephila pilipes",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Nephilengys malabarensis",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Neriene digna",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Nesticodes rufipes",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Oxyopes salticus",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Pachygnatha degeeri",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9846,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Parawixia dehaani",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.975,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Pardosa sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Philodromus sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Pholcus manueli",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Rhene flavicomans",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Siler semiglaucus",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9867,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Tetragnatha sp.",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Thomisus marginifrons",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 0.9855,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    },
+    {
+      "species": "Wadicosa fidelis",
+      "Logistic Regression": 1.0,
+      "KNN": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "SVM": 1.0
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "canonical_v3": {
+    "n_predictors": 55,
+    "predictors_constant_within_every_species": [
+      "cheliceral_teeth_count",
+      "promarginal_teeth_count",
+      "retromarginal_teeth_count",
+      "eye_pattern",
+      "chelicera_shape",
+      "scopula",
+      "scopula_distribution",
+      "trichobothria_pattern",
+      "spinneret_type",
+      "spinneret_segmentation",
+      "spinneret_arrangement",
+      "sternum_shape",
+      "copulatory_opening_position",
+      "web_pattern"
+    ],
+    "n_predictors_constant_within_every_species": 14,
+    "n_species": 45,
+    "n_species_with_distinct_profile_on_constant_predictors": 24,
+    "size_variation": {
+      "body_length_mm": {
+        "median_within_species_cv": 0.0406,
+        "cv_of_species_means": 0.7299
+      },
+      "prosoma_length_mm": {
+        "median_within_species_cv": 0.0277,
+        "cv_of_species_means": 0.7467
+      },
+      "abdomen_length_mm": {
+        "median_within_species_cv": 0.0827,
+        "cv_of_species_means": 0.7353
+      },
+      "total_leg_length_i_mm": {
+        "median_within_species_cv": 0.0575,
+        "cv_of_species_means": 0.9342
+      }
+    }
+  },
+  "legacy_v1_share_rows_matching_species_description_text": {
+    "Prosoma Shape": 0.068,
+    "Carapace Marking": 0.076,
+    "Abdomen": 1.0,
+    "Abdomen Shape": 0.051,
+    "Abdominal Folium Pattern": 0.058,
+    "Eye Pattern": 0.052,
+    "Anterior Eye Row": 1.0,
+    "Posterior Eye Row": 1.0,
+    "Eye Row Curvature": 0.979,
+    "Eye Spacing": 1.0,
+    "Chelicera Shape": 0.109,
+    "Leg Formula": 1.0,
+    "Leg Spination Density": 0.816,
+    "Femur Spines": 1.0,
+    "Tibia Spines": 1.0,
+    "Metatarsus Spines": 1.0,
+    "Scopula Presence": 1.0,
+    "Scopula Distribution": 0.981,
+    "Trichobothria Pattern": 1.0,
+    "Tarsal Claw Teeth": 1.0,
+    "Spinneret Type": 0.082,
+    "Spinneret Segmentation": 1.0,
+    "Spinneret Arrangement": 0.077,
+    "Sternum Shape": 0.263,
+    "Epigyne Shape": 0.026,
+    "Epigyne Structure": 0.027,
+    "Copulatory Opening Position": 0.328,
+    "Copulatory Duct Shape": 0.309,
+    "Spermathecae Shape": 0.328,
+    "Spermathecae Spacing": 0.348
+  },
+  "legacy_v1_n_rows": 1721,
+  "legacy_v0_n_rows": 45
+}

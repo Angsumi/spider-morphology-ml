@@ -1,0 +1,58 @@
+column,original_header,label,abbreviation,unit,type,role,n_unique,n_missing,share_species_constant,min,max
+specimen_id,m,Specimen ID,m,,id,identifier (not a predictor),1721,0,,,
+species,Species,Species,,,categorical,target,45,0,,,
+prosoma_shape,Prosoma Shape (PrS),Prosoma Shape,PrS,,categorical,predictor,40,0,0.711,,
+carapace_marking,Carapace Marking (CM),Carapace Marking,CM,,categorical,predictor,237,0,0.0,,
+abdomen_size,Abdomen Size (Abd),Abdomen Size,Abd,,categorical,predictor,3,0,0.511,,
+abdomen_shape,Abdomen Shape (AbdS),Abdomen Shape,AbdS,,categorical,predictor,62,0,0.0,,
+abdominal_folium_pattern,Abdominal Folium Pattern (AFP),Abdominal Folium Pattern,AFP,,categorical,predictor,995,0,0.0,,
+eye_pattern,Eye Pattern (EP),Eye Pattern,EP,,categorical,predictor,6,0,1.0,,
+anterior_eye_row,Anterior Eye Row (AER),Anterior Eye Row,AER,,categorical,predictor,5,0,0.2,,
+posterior_eye_row,Posterior Eye Row (PER),Posterior Eye Row,PER,,categorical,predictor,5,0,0.244,,
+eye_row_curvature,Eye Row Curvature (ERC),Eye Row Curvature,ERC,,categorical,predictor,20,0,0.044,,
+eye_spacing,Eye Spacing (ES),Eye Spacing,ES,,categorical,predictor,3,0,0.2,,
+chelicera_shape,Chelicera Shape (ChS),Chelicera Shape,ChS,,categorical,predictor,19,0,1.0,,
+leg_formula,Leg Formula (LF),Leg Formula,LF,,categorical,predictor,11,0,0.0,,
+leg_spination_density,Leg Spination Density (LSD),Leg Spination Density,LSD,,categorical,predictor,3,100,0.222,,
+femur_spines,Femur Spines (FS),Femur Spines,FS,,categorical,predictor,5,0,0.2,,
+tibia_spines,Tibia Spines (TS),Tibia Spines,TS,,categorical,predictor,4,0,0.178,,
+metatarsus_spines,Metatarsus Spines (MS),Metatarsus Spines,MS,,categorical,predictor,4,0,0.178,,
+scopula,Scopula (ScP),Scopula,ScP,,categorical,predictor,3,0,1.0,,
+scopula_distribution,Scopula Distribution (ScD),Scopula Distribution,ScD,,categorical,predictor,5,0,1.0,,
+trichobothria_pattern,Trichobothria Pattern (TrP),Trichobothria Pattern,TrP,,categorical,predictor,3,0,1.0,,
+spinneret_type,Spinneret Type (SpT),Spinneret Type,SpT,,categorical,predictor,6,0,1.0,,
+spinneret_segmentation,Spinneret Segmentation (SpS),Spinneret Segmentation,SpS,,categorical,predictor,2,0,1.0,,
+spinneret_arrangement,Spinneret Arrangement (SpA),Spinneret Arrangement,SpA,,categorical,predictor,3,0,1.0,,
+sternum_shape,Sternum Shape (StS),Sternum Shape,StS,,categorical,predictor,13,0,1.0,,
+epigyne_shape,Epigyne Shape (EpiS),Epigyne Shape,EpiS,,categorical,predictor,152,0,0.0,,
+epigyne_structure,Epigyne Structure (EpiSt),Epigyne Structure,EpiSt,,categorical,predictor,400,0,0.0,,
+copulatory_opening_position,Copulatory Opening Position (COP),Copulatory Opening Position,COP,,categorical,predictor,4,0,1.0,,
+copulatory_duct_shape,Copulatory Duct Shape (CDS),Copulatory Duct Shape,CDS,,categorical,predictor,5,0,0.067,,
+spermathecae_shape,Spermathecae Shape (SS),Spermathecae Shape,SS,,categorical,predictor,158,0,0.0,,
+spermathecae_spacing,Spermathecae Spacing (SSp),Spermathecae Spacing,SSp,,categorical,predictor,3,0,0.0,,
+body_length_mm,"Body Length (BL, mm)",Body Length,BL,mm,numeric,predictor,932,0,0.0,2.89,43.19
+prosoma_length_mm,"Prosoma Length (PrL, mm)",Prosoma Length,PrL,mm,numeric,predictor,535,0,0.0,1.01,15.32
+prosoma_width_mm,"Prosoma Width (PrW, mm)",Prosoma Width,PrW,mm,numeric,predictor,476,0,0.0,0.72,10.6
+cheliceral_teeth_count,Cheliceral Teeth Count (ChTC),Cheliceral Teeth Count,ChTC,,numeric,predictor,6,0,1.0,4,11
+promarginal_teeth_count,Promarginal Teeth Count (PMTC),Promarginal Teeth Count,PMTC,,numeric,predictor,5,0,1.0,2,6
+retromarginal_teeth_count,Retromarginal Teeth Count (RMTC),Retromarginal Teeth Count,RMTC,,numeric,predictor,4,0,1.0,2,5
+total_leg_length_i_mm,"Total Leg Length I (Leg I, mm)",Total Leg Length I,Leg I,mm,numeric,predictor,1042,0,0.0,4.58,96.1
+total_leg_length_ii_mm,"Total Leg Length II (Leg II, mm)",Total Leg Length II,Leg II,mm,numeric,predictor,1007,0,0.0,3.96,89.64
+total_leg_length_iii_mm,"Total Leg Length III (Leg III, mm)",Total Leg Length III,Leg III,mm,numeric,predictor,893,0,0.0,2.95,52.22
+total_leg_length_iv_mm,"Total Leg Length IV (Leg IV, mm)",Total Leg Length IV,Leg IV,mm,numeric,predictor,1030,0,0.0,4.18,81.08
+chelicera_length_mm,"Chelicera Length (CH, mm)",Chelicera Length,CH,mm,numeric,predictor,159,0,0.0,0.17,2.57
+carapace_length_mm,"Carapace Length (CL, mm)",Carapace Length,CL,mm,numeric,predictor,481,0,0.0,1.02,13.98
+carapace_width_mm,"Carapace Width (CW, mm)",Carapace Width,CW,mm,numeric,predictor,436,0,0.0,0.79,10.12
+abdomen_length_mm,"Abdomen Length (AL, mm)",Abdomen Length,AL,mm,numeric,predictor,660,0,0.0,1.56,27.06
+abdomen_width_mm,"Abdomen Width (AW, mm)",Abdomen Width,AW,mm,numeric,predictor,554,0,0.0,1.2,14.1
+sternum_length_mm,"Sternum Length (SL, mm)",Sternum Length,SL,mm,numeric,predictor,306,0,0.0,0.46,6.54
+sternum_width_mm,"Sternum Width (SW, mm)",Sternum Width,SW,mm,numeric,predictor,295,0,0.0,0.42,5.65
+web_pattern,Web Pattern (WP),Web Pattern,WP,,categorical,predictor,5,0,1.0,,
+prosoma_aspect_ratio,Prosoma Aspect Ratio (PAR),Prosoma Aspect Ratio,PAR,,numeric,predictor,598,0,0.0,0.912,2.1
+carapace_aspect_ratio,Carapace Aspect Ratio (CAR),Carapace Aspect Ratio,CAR,,numeric,predictor,365,0,0.0,1.024,1.628
+abdomen_aspect_ratio,Abdomen Aspect Ratio (AAR),Abdomen Aspect Ratio,AAR,,numeric,predictor,723,0,0.0,0.637,2.708
+sternum_aspect_ratio,Sternum Aspect Ratio (SAR),Sternum Aspect Ratio,SAR,,numeric,predictor,297,0,0.0,0.932,1.391
+relative_abdomen_length_pct,"Relative Abdomen Length (RAL, %)",Relative Abdomen Length,RAL,%,numeric,predictor,1679,0,0.0,18.837,113.485
+total_relative_leg_length_pct,"Total Relative Leg Length (TRLL, %)",Total Relative Leg Length,TRLL,%,numeric,predictor,1719,0,0.0,204.457,2196.382
+leg_i_iii_length_ratio,Leg I/III Length Ratio (Leg I/III),Leg I/III Length Ratio,Leg I/III,,numeric,predictor,706,0,0.0,0.981,2.22
+relative_chelicera_length_pct,"Relative Chelicera Length (RCHL, %)",Relative Chelicera Length,RCHL,%,numeric,predictor,1400,0,0.0,2.211,10.581
