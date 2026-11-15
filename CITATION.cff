@@ -8,7 +8,7 @@ authors:
   - family-names: "Das"
     given-names: "Angsuman"
     orcid: "https://orcid.org/0000-0001-8146-7697"
-repository-code: "https://github.com/Angsumi/MD_Machine_Learning"
+repository-code: "https://github.com/Angsumi/spider-morphology-ml"
 license: MIT
 keywords:
   - spiders

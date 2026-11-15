@@ -3,7 +3,7 @@
 
 # Spider species classification from morphological characters
 
-[![tests](https://github.com/Angsumi/MD_Machine_Learning/actions/workflows/tests.yml/badge.svg)](https://github.com/Angsumi/MD_Machine_Learning/actions/workflows/tests.yml)
+[![tests](https://github.com/Angsumi/spider-morphology-ml/actions/workflows/tests.yml/badge.svg)](https://github.com/Angsumi/spider-morphology-ml/actions/workflows/tests.yml)
 ![Code: MIT](https://img.shields.io/badge/code-MIT-blue)
 ![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)
 
@@ -158,8 +158,8 @@ from legacy v1 and the hold-out protocol, so they are not directly comparable wi
 ## Reproduce
 
 ```bash
-git clone https://github.com/Angsumi/MD_Machine_Learning.git
-cd MD_Machine_Learning
+git clone https://github.com/Angsumi/spider-morphology-ml.git
+cd spider-morphology-ml
 micromamba create -f environment.yml      # or: conda env create -f environment.yml
 micromamba activate spider-morphology-ml
 make all     # prepare_data → train_evaluate → reproduce_notebook → explain_shap → data_diagnostics
