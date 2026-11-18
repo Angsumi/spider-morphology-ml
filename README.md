@@ -7,7 +7,7 @@
 ![Code: MIT](https://img.shields.io/badge/code-MIT-blue)
 ![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)
 
-**[Try the interactive identification key →](https://angsumi.github.io/spider-morphology-ml/)**
+**[Try the interactive identification key →](https://angsumi.online/spider-morphology-ml/)**
 Answer what you can see, in any order, and the 45 species are ranked as you go.
 
 ## Question
