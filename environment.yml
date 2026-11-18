@@ -1,0 +1,15 @@
+# Pinned environment used to produce results/ (Linux x86_64, conda-forge).
+# Create with:  micromamba create -f environment.yml   (or conda/mamba env create)
+name: spider-morphology-ml
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas=2.2.3
+  - numpy=1.26.4
+  - scipy=1.17.1
+  - scikit-learn=1.5.2
+  - openpyxl=3.1.5
+  - matplotlib=3.9.4
+  - shap=0.46.0
+  - pytest=8.4

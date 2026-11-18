@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+      - name: Rebuild processed data and check it matches the committed copy
+        run: |
+          python src/prepare_data.py
+          git diff --exit-code -- data/processed/spiders.csv data/data_dictionary.csv
+      - name: Unit and smoke tests
+        run: python -m pytest -q
+      - name: Evaluation on a small sample (6 specimens per species, 3 folds)
+        run: python src/train_evaluate.py --sample 6 --folds 3 --out-dir "$RUNNER_TEMP/results" --fig-dir "$RUNNER_TEMP/figures"

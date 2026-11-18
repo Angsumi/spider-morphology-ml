@@ -1,0 +1,6 @@
+model,test_accuracy,notebook_test_accuracy,oof_accuracy,notebook_oof_accuracy,oof_macro_f1,notebook_oof_macro_f1
+Logistic Regression,0.9884,0.9884,0.9651,0.9651,0.963,0.963
+KNN,0.8145,0.8145,0.8321,0.8321,0.8207,0.8207
+Decision Tree,0.9826,0.9826,0.9891,0.9891,0.9884,0.9884
+Random Forest,0.9884,0.9884,0.984,0.984,0.9835,0.9835
+SVM,0.9536,0.9536,0.9397,0.9397,0.9281,0.9281

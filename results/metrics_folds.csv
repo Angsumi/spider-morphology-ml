@@ -1,0 +1,76 @@
+feature_set,model,fold,accuracy,balanced_accuracy,macro_f1
+all,Logistic Regression,0,1.0,1.0,1.0
+all,Logistic Regression,1,1.0,1.0,1.0
+all,Logistic Regression,2,1.0,1.0,1.0
+all,Logistic Regression,3,1.0,1.0,1.0
+all,Logistic Regression,4,1.0,1.0,1.0
+all,KNN,0,0.9942,0.9926,0.9932
+all,KNN,1,1.0,1.0,1.0
+all,KNN,2,1.0,1.0,1.0
+all,KNN,3,0.9971,0.9968,0.9973
+all,KNN,4,1.0,1.0,1.0
+all,Decision Tree,0,0.9884,0.9864,0.9861
+all,Decision Tree,1,0.9913,0.9917,0.9918
+all,Decision Tree,2,0.9826,0.9819,0.981
+all,Decision Tree,3,1.0,1.0,1.0
+all,Decision Tree,4,1.0,1.0,1.0
+all,Random Forest,0,1.0,1.0,1.0
+all,Random Forest,1,1.0,1.0,1.0
+all,Random Forest,2,1.0,1.0,1.0
+all,Random Forest,3,1.0,1.0,1.0
+all,Random Forest,4,1.0,1.0,1.0
+all,SVM,0,1.0,1.0,1.0
+all,SVM,1,1.0,1.0,1.0
+all,SVM,2,1.0,1.0,1.0
+all,SVM,3,1.0,1.0,1.0
+all,SVM,4,1.0,1.0,1.0
+categorical,Logistic Regression,0,1.0,1.0,1.0
+categorical,Logistic Regression,1,1.0,1.0,1.0
+categorical,Logistic Regression,2,1.0,1.0,1.0
+categorical,Logistic Regression,3,1.0,1.0,1.0
+categorical,Logistic Regression,4,1.0,1.0,1.0
+categorical,KNN,0,0.9855,0.982,0.9822
+categorical,KNN,1,0.9971,0.9956,0.996
+categorical,KNN,2,0.9942,0.9911,0.992
+categorical,KNN,3,0.9913,0.9894,0.9903
+categorical,KNN,4,1.0,1.0,1.0
+categorical,Decision Tree,0,0.9942,0.9938,0.9935
+categorical,Decision Tree,1,0.9971,0.9972,0.9972
+categorical,Decision Tree,2,0.9767,0.9773,0.9779
+categorical,Decision Tree,3,0.9913,0.9909,0.9909
+categorical,Decision Tree,4,0.9971,0.9968,0.997
+categorical,Random Forest,0,1.0,1.0,1.0
+categorical,Random Forest,1,1.0,1.0,1.0
+categorical,Random Forest,2,1.0,1.0,1.0
+categorical,Random Forest,3,1.0,1.0,1.0
+categorical,Random Forest,4,1.0,1.0,1.0
+categorical,SVM,0,1.0,1.0,1.0
+categorical,SVM,1,1.0,1.0,1.0
+categorical,SVM,2,0.9971,0.9968,0.9966
+categorical,SVM,3,1.0,1.0,1.0
+categorical,SVM,4,1.0,1.0,1.0
+numeric,Logistic Regression,0,0.9449,0.9412,0.943
+numeric,Logistic Regression,1,0.9709,0.9695,0.9703
+numeric,Logistic Regression,2,0.9709,0.9701,0.97
+numeric,Logistic Regression,3,0.9593,0.9607,0.9605
+numeric,Logistic Regression,4,0.9709,0.9692,0.9695
+numeric,KNN,0,0.9333,0.9335,0.9306
+numeric,KNN,1,0.9506,0.9482,0.9491
+numeric,KNN,2,0.9419,0.9409,0.9422
+numeric,KNN,3,0.9477,0.9477,0.9474
+numeric,KNN,4,0.9564,0.9553,0.9568
+numeric,Decision Tree,0,0.971,0.9685,0.9687
+numeric,Decision Tree,1,0.9797,0.9776,0.9778
+numeric,Decision Tree,2,0.9767,0.9743,0.9741
+numeric,Decision Tree,3,0.9797,0.9779,0.9786
+numeric,Decision Tree,4,0.9884,0.988,0.9878
+numeric,Random Forest,0,0.9942,0.9944,0.9944
+numeric,Random Forest,1,0.9971,0.9968,0.9968
+numeric,Random Forest,2,0.9942,0.9928,0.9929
+numeric,Random Forest,3,0.9942,0.9944,0.9942
+numeric,Random Forest,4,0.9884,0.9885,0.9884
+numeric,SVM,0,0.9536,0.9527,0.9528
+numeric,SVM,1,0.9535,0.9516,0.951
+numeric,SVM,2,0.9535,0.9517,0.9514
+numeric,SVM,3,0.9477,0.9491,0.9485
+numeric,SVM,4,0.9622,0.9614,0.9618

@@ -1,0 +1,16 @@
+feature_set,model,accuracy_mean,accuracy_std,balanced_accuracy_mean,balanced_accuracy_std,macro_f1_mean,macro_f1_std
+all,Logistic Regression,1.0,0.0,1.0,0.0,1.0,0.0
+all,Random Forest,1.0,0.0,1.0,0.0,1.0,0.0
+all,SVM,1.0,0.0,1.0,0.0,1.0,0.0
+all,KNN,0.9983,0.0026,0.9979,0.0033,0.9981,0.003
+all,Decision Tree,0.9924,0.0076,0.992,0.0081,0.9918,0.0084
+categorical,Logistic Regression,1.0,0.0,1.0,0.0,1.0,0.0
+categorical,Random Forest,1.0,0.0,1.0,0.0,1.0,0.0
+categorical,SVM,0.9994,0.0013,0.9994,0.0014,0.9993,0.0015
+categorical,KNN,0.9936,0.0056,0.9916,0.0068,0.9921,0.0067
+categorical,Decision Tree,0.9913,0.0085,0.9912,0.0082,0.9913,0.0079
+numeric,Random Forest,0.9936,0.0032,0.9934,0.0031,0.9934,0.0031
+numeric,Decision Tree,0.9791,0.0063,0.9773,0.0071,0.9774,0.007
+numeric,Logistic Regression,0.9634,0.0115,0.9621,0.0123,0.9627,0.0117
+numeric,SVM,0.9541,0.0052,0.9533,0.0047,0.9531,0.0051
+numeric,KNN,0.946,0.0088,0.9451,0.0082,0.9452,0.0097
