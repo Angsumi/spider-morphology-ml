@@ -7,6 +7,9 @@
 ![Code: MIT](https://img.shields.io/badge/code-MIT-blue)
 ![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)
 
+**[Try the interactive identification key →](https://angsumi.github.io/spider-morphology-ml/)**
+Answer what you can see, in any order, and the 45 species are ranked as you go.
+
 ## Question
 
 Can standard machine-learning classifiers assign spider specimens to one of 45 species
@@ -154,6 +157,30 @@ Differences between the notebook and this repository:
 Figures from the original notebook (Colab) are kept in `figures/original_notebook/`. They come
 from legacy v1 and the hold-out protocol, so they are not directly comparable with the tables above.
 
+## Interactive identification key
+
+`docs/` holds a static web app served by GitHub Pages, with no build step and no server.
+It is a multi-entry key: you answer any of 62 questions, in any order, and species are
+ranked by the share of your answers they match. There are 43 multiple-choice questions:
+28 basic and 15 expert. There are also 19 measurement questions.
+A "Suggest a question" button picks the unanswered question that best splits the
+species still in the running.
+
+- Questions and answer options come from the workbook's `Website_Questions` sheet.
+  The eight "calculated automatically" ratio questions are not asked.
+- Each species' possible answers come from `Species_Profiles` for questions 1–39 and from
+  the per-specimen values in `Sheet1` for questions 40–62. A species can show more than one
+  state for a character.
+- A measurement counts as a match inside the species' range, and as half a match within 15%
+  outside it.
+- `src/build_key.py` regenerates `docs/key-data.json`, and a test checks the committed copy is current.
+
+Known data issue: for 9 species, the body lengths in `Sheet1` lie outside the
+`Species_Profiles` range used by the key's body-length question. One example is
+*Apochinomma elongatum*: 13.27–13.86 mm vs 5.03–7.25 mm. The key uses the profile ranges.
+
+To run locally: `python -m http.server --directory docs`, then open http://localhost:8000.
+
 ## Reproduce
 
 ```bash
@@ -161,7 +188,7 @@ git clone https://github.com/Angsumi/spider-morphology-ml.git
 cd spider-morphology-ml
 micromamba create -f environment.yml      # or: conda env create -f environment.yml
 micromamba activate spider-morphology-ml
-make all     # prepare_data → train_evaluate → reproduce_notebook → explain_shap → data_diagnostics
+make all     # prepare_data → train_evaluate → reproduce_notebook → explain_shap → data_diagnostics → build_key
 make test    # unit tests + a small end-to-end smoke test
 ```
 
@@ -175,10 +202,11 @@ committed copy, runs the tests and runs the evaluation on a 6-per-species sample
 ```
 data/        raw/ (canonical workbook + legacy/), processed/spiders.csv, data_dictionary.csv, LICENSE (CC BY 4.0)
 src/         prepare_data.py, models.py, train_evaluate.py, explain_shap.py,
-             reproduce_notebook.py, data_diagnostics.py
+             reproduce_notebook.py, data_diagnostics.py, build_key.py
 notebooks/   original Colab notebook (unchanged)
 results/     metrics CSV/JSON, confusion matrices, SHAP table, diagnostics
 figures/     figures produced by src/, original_notebook/ figures
+docs/        interactive identification key (GitHub Pages) + key-data.json
 tests/       pytest unit tests and smoke test
 ```
 

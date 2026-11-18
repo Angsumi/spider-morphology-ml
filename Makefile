@@ -1,8 +1,8 @@
 # Reproduce everything: make all   (inside the spider-morphology-ml environment)
 PY ?= python
 
-.PHONY: all data evaluate notebook shap diagnostics test
-all: data evaluate notebook shap diagnostics
+.PHONY: all data evaluate notebook shap diagnostics key test
+all: data evaluate notebook shap diagnostics key
 
 data:
 	$(PY) src/prepare_data.py
@@ -18,6 +18,9 @@ shap:
 
 diagnostics:
 	$(PY) src/data_diagnostics.py
+
+key:
+	$(PY) src/build_key.py
 
 test:
 	$(PY) -m pytest -q
